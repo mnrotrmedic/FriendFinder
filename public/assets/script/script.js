@@ -23,7 +23,7 @@ $("#submitButton").click(function (event) {
     // Don't reload the page on click event
     event.preventDefault();
 
-    // $("form").trigger("reset")
+
 
     var newUser = {
         "name": $("#name").val().trim(),
@@ -42,4 +42,5 @@ $("#submitButton").click(function (event) {
         ]
     };
     console.log(newUser);
+    $("form").trigger("reset")
 });
