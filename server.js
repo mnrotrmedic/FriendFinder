@@ -16,5 +16,7 @@ require("./routing/htmlRoutes")(app);
 //Lets-A-Go <--In Mario Voice
 app.listen(PORT, function () {
     console.log("App listening on PORT: " + PORT);
-    console.log("localhost:" + PORT)
 });
+
+//Allows use of statis assets
+app.use(express.static('public'))
