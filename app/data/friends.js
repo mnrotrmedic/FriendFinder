@@ -1,4 +1,4 @@
-var friends = [
+var friendsList = [
     {
         "name": "Eva",
         "photo": "https://m.media-amazon.com/images/M/MV5BMTQ0MDA2ODE2Ml5BMl5BanBnXkFtZTcwMjI0Nzc3Nw@@._V1_SY1000_CR0,0,638,1000_AL_.jpg",
@@ -31,6 +31,6 @@ var friends = [
             1
         ]
     }
-]
+];
 
-module.exports = friends
+module.exports = friendsList;

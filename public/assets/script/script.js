@@ -1,52 +1,30 @@
-var users = [
-    {
-        "name": "Judy",
-        "photo": "https://i.pinimg.com/736x/d9/a5/0f/d9a50fa8ce4ace7ff705d573d3690580.jpg",
-        "scores": [
-            5,
-            1,
-            4,
-            4,
-            5,
-            1,
-            2,
-            5,
-            4,
-            1
-        ]
-    }
-]
-
-$("#submitButton").click(function (event) {
+$("#submitButton").on("click", function (event) {
     // Don't reload the page on click event
     event.preventDefault();
 
-
-
     var newUser = {
-        "name": $("#name").val().trim(),
-        "photo": photoLink = $("#photo").val().trim(),
-        "scores": [
-            quest1 = $("#sel1").val(),
-            quest2 = $("#sel2").val(),
-            quest3 = $("#sel3").val(),
-            quest4 = $("#sel4").val(),
-            quest5 = $("#sel5").val(),
-            quest6 = $("#sel6").val(),
-            quest7 = $("#sel7").val(),
-            quest8 = $("#sel8").val(),
-            quest9 = $("#sel9").val(),
-            quest10 = $("#sel10").val()
-        ]
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        scores: [
+            $("#sel1").val(),
+            $("#sel2").val(),
+            $("#sel3").val(),
+            $("#sel4").val(),
+            $("#sel5").val(),
+            $("#sel6").val(),
+            $("#sel7").val(),
+            $("#sel8").val(),
+            $("#sel9").val(),
+            $("#sel10").val()
+        ],
     };
 
-    $.post("/data/friends.js"), newUser, function (data) {
-        if (data) { console.log("Winning") }
-        else { console.log("Not winning yet...") };
-    }
+    // $.post("app/data/friends"), newUser, function (data) {
+    //     if (data) { console.log("Winning") }
+    //     else { console.log("Not winning yet...") };
+    // };
 
     console.log(newUser);
     $("form").trigger("reset");
 
 });
-
