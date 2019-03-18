@@ -1,5 +1,3 @@
-
-
 var users = [
     {
         "name": "Judy",
@@ -41,6 +39,14 @@ $("#submitButton").click(function (event) {
             quest10 = $("#sel10").val()
         ]
     };
+
+    $.post("/data/friends.js"), newUser, function (data) {
+        if (data) { console.log("Winning") }
+        else { console.log("Not winning yet...") };
+    }
+
     console.log(newUser);
-    $("form").trigger("reset")
+    $("form").trigger("reset");
+
 });
+
