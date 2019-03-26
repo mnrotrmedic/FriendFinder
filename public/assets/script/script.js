@@ -25,8 +25,10 @@ $("#submitButton").on("click", function (event) {
     }).done(function (data) {
         console.log("Name of matched user: " + data.name);
         console.log("Image link of matched user: " + data.photo);
-        $("#matchedUser.name").html("<p>" + data.name + "<p>"); //jQuery to add _name_ info to modal
-        $("#matchedUser.photo").html("<img src= '" + data.photo + "'>"); //jQuery to add _user image_ info to modal
+        setTimeout(function () {
+            $("#matchedUserName").html("<h2>" + data.name + "</h2>"); //jQuery to add _name_ info to modal
+            $("#matchedUserPhoto").html("<img src= '" + data.photo + "'>"); //jQuery to add _user image_ info to modal
+        }, 500)
     });
 
     $("form").trigger("reset");
