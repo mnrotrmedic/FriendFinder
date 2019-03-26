@@ -232,11 +232,33 @@
 
 
 
-                    <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
+                    <button type="submit" id="submitButton" data-toggle="modal" data-target="#matchedUserModal"
+                        class="btn btn-primary">Submit</button>
                     <button type="reset" class="btn ">Reset</button>
                 </form>
             </div>
         </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="matchedUserModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">We found a match!</h4>
+                    <!-- Modal Body -->
+                    <div class="modal-body">Your match is:</div>
+                    <p id="matchedUser.name">Name</p>
+                    <img id="matchedUser.photo" src=# alt="#">
+                    <!-- Modal Footer -->
+                    <div class="modal-footer">
+                        <button type="button" id="submit" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
     <script src="./assets/script/script.js" type="text/javascript"></script>

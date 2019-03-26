@@ -19,12 +19,17 @@ $("#submitButton").on("click", function (event) {
         ],
     };
 
-    $.post("app/data/friends"), newUser, function (data) {
-        if (data) { console.log("Winning") }
-        else { console.log("Not winning yet...") };
-    };
 
-    console.log(newUser);
+    $.post("app/data/friends", newUser, function (data) {
+        console.log(newUser);
+    }).done(function (data) {
+        console.log("Name of matched user: " + data.name);
+        console.log("Image link of matched user: " + data.photo);
+        $("#matchedUser.name").html("<p>" + data.name + "<p>"); //jQuery to add _name_ info to modal
+        $("#matchedUser.photo").html("<img src= '" + data.photo + "'>"); //jQuery to add _user image_ info to modal
+    });
+
     $("form").trigger("reset");
 
 });
+

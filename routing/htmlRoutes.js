@@ -16,7 +16,7 @@ module.exports = function (app) {
     });
 
     app.get("/friends", function (req, res) { //route to dump contents of friends file in JSON to browser
-        res.json(friends);
+        res.json(friends);                      //I know it's redundant to the apiRoutes
         for (i = 0; i < friends.length; i++) {
             console.log(friends[i].name);
         }
